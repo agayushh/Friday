@@ -5,8 +5,8 @@ import Pfp from "./components/Pfp";
 
 const Page = () => {
   return (
-    <div className="flex justify-center w-screen my-2">
-      <div className="border-x h-screen border-gray-900 w-full sm:w-4/5 md:w-3/5 lg:w-1/2 xl:w-[42%]">
+    <div className="flex justify-center size-full my-2">
+      <div className="border-x h-full border-gray-900 w-11/12 sm:w-9/12 md:w-9/12 lg:w-7/12 xl:w-6/12 2xl:w-5/12">
         <Navbar />
         <Header />
         <Pfp />
