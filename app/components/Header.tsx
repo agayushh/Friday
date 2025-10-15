@@ -2,7 +2,8 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div
+    <div className="">
+      <div 
       style={{
         backgroundColor: "#09090b",
         opacity: 1,
@@ -12,6 +13,7 @@ const Header = () => {
       className="min-h-52 w-full flex justify-center items-center mt-[58px] text-white"
     >
       <h1 className="text-9xl font-doto font-extralight">AG</h1>
+    </div>
     </div>
   );
 };

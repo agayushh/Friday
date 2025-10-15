@@ -31,7 +31,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable}
-        ${doto.variable} antialiased h-screen w-screen overflow-hidden`}
+        ${doto.variable} antialiased h-screen w-screen overflow-x-hidden`}
       >
         {children}
       </body>
