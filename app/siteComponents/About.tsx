@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="mt-10 m-2">
       <p className="text-3xl font-medium"> About</p>
-      <div className="text-3xl border-b absolute left-0 w-screen "></div>
+      <div className="border-b absolute left-0 w-screen "></div>
       <br />
       Hello, World! I am Chánh Đại — a Design Engineer passionate about creating
       high-performance, user-centric software solutions with intuitive and
