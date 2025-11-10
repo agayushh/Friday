@@ -8,6 +8,7 @@ import Socials from "./siteComponents/Socials";
 import About from "./siteComponents/About";
 import Stats from "./siteComponents/Stats";
 import Stack from "./siteComponents/Stack";
+import Experience from "./siteComponents/Experience";
 
 const Page = () => {
   return (
@@ -26,6 +27,8 @@ const Page = () => {
         <Stats />
         <BorderSpacing />
         <Stack />
+        <BorderSpacing />
+        <Experience />
       </div>
     </div>
   );
