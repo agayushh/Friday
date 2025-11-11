@@ -1,7 +1,8 @@
+import { IconType } from "react-icons/lib";
+
 export interface TechStack {
-    icon:string,
-    key: string,
-    title: string,
-    href: string, 
-    categories: string[]
+  icon: string | IconType;
+  title: string;
+  href: string;
+  categories: string[];
 }
