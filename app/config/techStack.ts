@@ -240,3 +240,16 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Platform", "OS"],
   },
 ];
+ //digital ocean 
+  // trpc
+  //webrtc 
+  //neovim
+  //grafana
+  //k8s
+  //apache
+  //vercel
+  //kafka
+  // prometheus
+  //hono
+  //nest 
+  //go
