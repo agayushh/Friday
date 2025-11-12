@@ -5,18 +5,18 @@ export default function WakaSummary({ stats }: { stats: any }) {
   const avg = stats.human_readable_daily_average;
 
   return (
-    <div className="border-r w-60 h-60 text-gray-200 grid grid-row-3 gap-6 text-center">
-      <div className="p-3">
-        <p className="text-gray-400">Editor</p>
-        <p className="text-xl font-semibold">{editor}</p>
+    <div className="border-r border-gray-800/50 w-60 h-fit grid grid-rows-3 gap-8 py-6">
+      <div className="px-6 space-y-2">
+        <p className="text-sm text-gray-500 uppercase tracking-wider font-medium">Editor</p>
+        <p className="text-2xl font-bold text-white">{editor}</p>
       </div>
-      <div>
-        <p className="text-gray-400">Daily Avg</p>
-        <p className="text-xl font-semibold">{avg}</p>
+      <div className="px-6 space-y-2">
+        <p className="text-sm text-gray-500 uppercase tracking-wider font-medium">Daily Avg</p>
+        <p className="text-2xl font-bold text-white">{avg}</p>
       </div>
-      <div>
-        <p className="text-gray-400">OS</p>
-        <p className="text-xl font-semibold">{os}</p>
+      <div className="px-6 space-y-2">
+        <p className="text-sm text-gray-500 uppercase tracking-wider font-medium">OS</p>
+        <p className="text-2xl font-bold text-white">{os}</p>
       </div>
     </div>
   );
