@@ -5,8 +5,8 @@ import { FaLocationArrow } from "react-icons/fa6";
 
 const PersonalInfo = () => {
   return (
-    <div className="m-2 mt-7">
-      <div className="opacity-40 text-xl mt-10 ml-3">
+    <div className="m-2 mt-7 font-maven">
+      <div className="opacity-40 text-xl mt-10 ml-3 font-jura">
         Data of the Intelligence Personnel
       </div>
       <div>

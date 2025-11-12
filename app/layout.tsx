@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Doto} from "next/font/google";
+import { Geist, Geist_Mono, Jura, Maven_Pro } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,10 +12,16 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const doto = Doto({
-  variable: "--font-doto",
+const maven = Maven_Pro({
+  variable: "--font-maven",
   subsets: ["latin"],
-})
+  weight: ["400", "700"],
+});
+
+const jura = Jura({
+  variable: "--font-jura",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -31,7 +37,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable}
-        ${doto.variable} antialiased h-screen w-screen overflow-x-hidden`}
+       ${jura.variable} ${maven.variable} antialiased h-screen w-screen overflow-x-hidden`}
       >
         {children}
       </body>
