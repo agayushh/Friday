@@ -19,7 +19,7 @@ const Header = () => {
           style={darkDotPattern}
           className="absolute inset-0 hidden dark:block"
         />
-        <h1 className="text-9xl font-doto font-extralight text-black dark:text-white relative z-10">
+        <h1 className="text-9xl font-jura font-extralight text-black dark:text-white relative z-10">
           AG
         </h1>
       </div>

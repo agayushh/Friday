@@ -25,7 +25,9 @@ const Socials = () => {
                 <p className="font-medium group-hover:underline">
                   {social.title}
                 </p>
-                <p className="text-sm opacity-50">{social.description}</p>
+                <p className="text-sm opacity-50 font-jura">
+                  {social.description}
+                </p>
               </a>
             </div>
           </div>
