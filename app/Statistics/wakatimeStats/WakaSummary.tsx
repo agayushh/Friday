@@ -5,28 +5,28 @@ export default function WakaSummary({ stats }: { stats: any }) {
   const avg = stats.human_readable_daily_average;
 
   return (
-    <div className=" border-b h-fit flex items-center justify-between gap-4 py-2 ">
-      <div className="px-6 ">
-        <p className="text-sm text-gray-500 uppercase tracking-wider font-maven font-medium">
+    <div className="border-b h-fit flex items-center justify-between gap-2 sm:gap-4 py-2">
+      <div className="px-2 sm:px-6">
+        <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wider font-maven font-medium">
           Editor
         </p>
-        <p className="sm:text-xl md:text-2xl font-bold text-md  font-jura text-black dark:text-white">
+        <p className="text-sm sm:text-xl md:text-2xl font-bold font-jura text-black dark:text-white">
           {editor}
         </p>
       </div>
-      <div className="px-6">
-        <p className="text-sm text-gray-500 uppercase tracking-wider font-maven font-medium">
+      <div className="px-2 sm:px-6">
+        <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wider font-maven font-medium">
           Daily Avg
         </p>
-        <p className="sm:text-xl md:text-2xl text-md font-bold font-jura text-black dark:text-white">
+        <p className="text-xs sm:text-xl md:text-2xl font-bold font-jura text-black dark:text-white whitespace-nowrap">
           {avg}
         </p>
       </div>
-      <div className="px-6">
-        <p className="text-sm text-gray-500 uppercase tracking-wider font-maven font-medium">
+      <div className="px-2 sm:px-6">
+        <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wider font-maven font-medium">
           OS
         </p>
-        <p className="sm:text-xl md:text-2xl text-lg font-bold font-jura text-black dark:text-white">
+        <p className="text-sm sm:text-xl md:text-2xl font-bold font-jura text-black dark:text-white">
           {os}
         </p>
       </div>
