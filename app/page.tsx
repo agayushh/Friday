@@ -9,6 +9,7 @@ import About from "./siteComponents/About";
 import Stats from "./siteComponents/Stats";
 import Stack from "./siteComponents/Stack";
 import Experience from "./siteComponents/Experience";
+import { Project } from "./siteComponents/Projects";
 
 const Page = () => {
   return (
@@ -29,6 +30,8 @@ const Page = () => {
         <Stack />
         <BorderSpacing />
         <Experience />
+        <BorderSpacing />
+        <Project />
       </div>
     </div>
   );
