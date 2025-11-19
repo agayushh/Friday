@@ -10,6 +10,7 @@ import Stats from "./siteComponents/Stats";
 import Stack from "./siteComponents/Stack";
 import Experience from "./siteComponents/Experience";
 import { Project } from "./siteComponents/Projects";
+import Achievements  from "./siteComponents/Achievements";
 
 const Page = () => {
   return (
@@ -32,6 +33,8 @@ const Page = () => {
         <Experience />
         <BorderSpacing />
         <Project />
+        <BorderSpacing />
+        <Achievements />
       </div>
     </div>
   );
