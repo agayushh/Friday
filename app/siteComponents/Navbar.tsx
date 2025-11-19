@@ -23,7 +23,10 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (navbarRef.current && !navbarRef.current.contains(event.target as Node)) {
+      if (
+        navbarRef.current &&
+        !navbarRef.current.contains(event.target as Node)
+      ) {
         setIsMenuOpen(false);
       }
     };
@@ -67,14 +70,21 @@ const Navbar = () => {
   };
 
   return (
-    <div ref={navbarRef} className="fixed left-0 w-screen bg-white dark:bg-[#09090b] z-30 transition-colors duration-300">
+    <div
+      ref={navbarRef}
+      className="fixed left-0 w-screen bg-white dark:bg-[#09090b] z-30 transition-colors duration-300"
+    >
       <div className="w-full border-y border-gray-200 dark:border-gray-900 mt-1.5 py-3 h-12">
         <div className="flex justify-center items-center w-full h-full">
           <div className="flex justify-between items-center w-11/12 sm:w-9/12 md:w-9/12 lg:w-7/12 xl:w-6/12 2xl:w-5/12 px-4 text-gray-900 dark:text-white">
             {/* Logo on the left */}
-            <div className={`font-jura text-4xl sm:text-5xl transition-all duration-300 ${
-              showLogo ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
-            }`}>
+            <div
+              className={`font-jura text-4xl sm:text-5xl transition-all duration-300 ${
+                showLogo
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 -translate-x-4"
+              }`}
+            >
               AG
             </div>
 
@@ -142,19 +152,19 @@ const Navbar = () => {
         }`}
       >
         <div className="flex flex-col font-jura px-6 py-4 space-y-4">
-          <span 
+          <span
             className="cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
             Portfolio
           </span>
-          <span 
+          <span
             className="cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
             Projects
           </span>
-          <span 
+          <span
             className="cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
