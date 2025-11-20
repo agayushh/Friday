@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Map from "@/public/map.webp";
 import { PERSONAL_INFO } from "../config/personInfo";
 import { FaLocationArrow } from "react-icons/fa6";
@@ -6,7 +7,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 const PersonalInfo = () => {
   return (
     <div className="m-2 mt-7 font-maven">
-      <div className="opacity-70 text-xl mt-10 ml-3 font-jura">
+      <div className="text-gray-600 dark:text-gray-400 text-xl mt-10 ml-3 font-jura">
         Detailed dossier of the Intelligence Personnel
       </div>
       <div>
@@ -27,24 +28,24 @@ const PersonalInfo = () => {
                           ? info.href
                           : `mailto:${info.information}`
                       }
-                      className="hover:underline break-all"
+                      className="hover:underline break-all text-black dark:text-white"
                       target="_blank"
                     >
                       {info.information}
                     </a>
                   ) : (
-                    <p className="break-all">{info.information}</p>
+                    <p className="break-all text-black dark:text-white">{info.information}</p>
                   )}
                 </div>
               </li>
             ))}
             <li className="flex md:hidden">
               <div className="border p-[1px] rounded-lg">
-                <div className="bg-gray-500/30 p-1 rounded-md">
-                  <FaLocationArrow className="  h-5 w-5 text-gray-400 shadow-2xl" />
+                <div className="bg-gray-100 dark:bg-gray-500/30 p-1 rounded-md">
+                  <FaLocationArrow className="h-5 w-5 text-gray-400 shadow-2xl" />
                 </div>
               </div>
-              <span className="ml-2">Delhi, India</span>
+              <span className="ml-2 text-black dark:text-white">Delhi, India</span>
             </li>
           </div>
           {/* //////////////////////////////////////////////////////////////////////////////////////////////// */}
@@ -75,11 +76,14 @@ const PersonalInfo = () => {
             </div>
 
             {/* Image with smooth zoom effect */}
-            <img
-              src={Map.src}
-              alt="Map"
+            <Image
+              src={Map}
+              alt="Map showing location"
               className="h-full w-full object-cover rounded-xl transition-all duration-500 ease-in-out 
                group-hover:scale-250 group-hover:brightness-110 group-hover:saturate-150"
+              width={192}
+              height={160}
+              loading="lazy"
             />
 
             {/* Optional overlay effect */}

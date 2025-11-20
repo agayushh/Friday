@@ -6,18 +6,30 @@ import { FaGithub } from "react-icons/fa";
 import { HiMenu, HiX } from "react-icons/hi";
 
 const Navbar = () => {
-  const [darkMode, setDarkMode] = useState(true);
+  // Initialize with a function to read localStorage on first render
+  const [darkMode, setDarkMode] = useState(() => {
+    // This runs only on client-side during initial render
+    if (typeof window !== "undefined") {
+      const theme = localStorage.getItem("theme");
+      return theme !== "light"; // Default to dark mode
+    }
+    return true; // Server-side default
+  });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showLogo, setShowLogo] = useState(false);
   const navbarRef = useRef<HTMLDivElement>(null);
 
+  // Sync with system preference or localStorage on mount
   useEffect(() => {
     const theme = localStorage.getItem("theme");
-    if (theme === "light") {
-      setDarkMode(false);
-      document.documentElement.classList.remove("dark");
-    } else {
+    const isDark = theme !== "light";
+    setDarkMode(isDark);
+
+    // Apply the class to ensure consistency
+    if (isDark) {
       document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
     }
   }, []);
 
@@ -74,7 +86,7 @@ const Navbar = () => {
       ref={navbarRef}
       className="fixed left-0 w-screen bg-white dark:bg-[#09090b] z-30 transition-colors duration-300"
     >
-      <div className="w-full border-y border-gray-200 dark:border-gray-900 mt-1.5 py-3 h-12">
+      <div className="w-full border-y mt-1.5 py-3 h-12">
         <div className="flex justify-center items-center w-full h-full">
           <div className="flex justify-between items-center w-11/12 sm:w-9/12 md:w-9/12 lg:w-7/12 xl:w-6/12 2xl:w-5/12 px-4 text-gray-900 dark:text-white">
             {/* Logo on the left */}
@@ -110,7 +122,7 @@ const Navbar = () => {
               </a>
               <button
                 onClick={toggleDarkMode}
-                className="px-2 rounded-lg transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                className="px-2 rounded-lg transition-all duration-300"
                 aria-label="Toggle dark mode"
               >
                 {darkMode ? <LuSunMedium size={18} /> : <FiMoon size={18} />}
@@ -147,7 +159,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-12 left-0 w-full bg-white dark:bg-[#09090b] border-b border-gray-200 dark:border-gray-900 shadow-lg overflow-hidden transition-all duration-300 ease-in-out ${
+        className={`md:hidden absolute top-12 left-0 w-full bg-white dark:bg-[#09090b] border-b shadow-lg overflow-hidden transition-all duration-300 ease-in-out ${
           isMenuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
         }`}
       >

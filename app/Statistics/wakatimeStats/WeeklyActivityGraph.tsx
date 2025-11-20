@@ -53,7 +53,7 @@ export default function WeeklyActivityChart({
     },
     tooltip: {
       trigger: "axis",
-      formatter: (params: any) => {
+      formatter: (params: Array<{ name: string; value: number }>) => {
         const hours = params[0].value;
         return `${params[0].name}: ${formatTime(hours)}`;
       },

@@ -1,7 +1,16 @@
 import { NextResponse } from 'next/server';
 import https from 'https';
 
-function httpsRequest(url: string, options: any): Promise<any> {
+// Enable caching for this route
+export const revalidate = 3600; // Revalidate every hour
+
+interface HttpsOptions {
+  method: string;
+  headers: Record<string, string>;
+  family: number;
+}
+
+function httpsRequest(url: string, options: HttpsOptions): Promise<unknown> {
   return new Promise((resolve, reject) => {
     const req = https.request(url, options, (res) => {
       let data = '';
@@ -14,7 +23,7 @@ function httpsRequest(url: string, options: any): Promise<any> {
         if (res.statusCode && res.statusCode >= 200 && res.statusCode < 300) {
           try {
             resolve(JSON.parse(data));
-          } catch (e) {
+          } catch {
             reject(new Error('Invalid JSON response'));
           }
         } else {
@@ -63,18 +72,33 @@ export async function GET() {
       },
       family: 4, // Force IPv4
     });
+    
+    interface DayData {
+      grand_total: {
+        total_seconds: number;
+      };
+    }
+    
+    const response = json as { data: DayData[] };
 
-    const dailyHours = json.data.map((day: any) =>
+    const dailyHours = response.data.map((day: DayData) =>
       parseFloat((day.grand_total.total_seconds / 3600).toFixed(2))
     );
 
     console.log('✅ WakaTime summaries fetched successfully');
-    return NextResponse.json(dailyHours);
     
-  } catch (error: any) {
-    console.error('❌ Failed to fetch WakaTime summaries:', error.message);
+    // Return with cache headers
+    return NextResponse.json(dailyHours, {
+      headers: {
+        'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=7200',
+      },
+    });
+    
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : "Failed to fetch WakaTime summaries";
+    console.error('❌ Failed to fetch WakaTime summaries:', errorMessage);
     return NextResponse.json(
-      { error: error.message || "Failed to fetch WakaTime summaries" },
+      { error: errorMessage },
       { status: 500 }
     );
   }

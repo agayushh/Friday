@@ -2,25 +2,32 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="mt-8  m-2">
-      <p className="text-2xl font-jura tracking-wide text-muted-foreground"> ABOUT</p>
-      <div className="border-b absolute left-0 w-screen "></div>
+    <div id="about" className="mt-8 m-2">
+      <p className="text-2xl font-jura tracking-wide text-gray-600 dark:text-gray-400">
+        {" "}
+        ABOUT
+      </p>
+      <div className="border-b absolute left-0 w-screen"></div>
       <br />
-      <div className="font-maven text-lg leading-6">
-        Hello, World! I am Chánh Đại — a Design Engineer passionate about
-        creating high-performance, user-centric software solutions with
-        intuitive and engaging designs. With 5+ years of experience, I
-        specialize in building high-quality web and mobile applications using
-        Next.js, React, TypeScript, and modern front-end technologies. Beyond
-        work, I love exploring new technologies and turning ideas into reality
-        through personal projects. One of my key projects, ZaDark, launched in
-        2022, enhances the Zalo experience on PC and Web, surpassing 80k+
-        downloads on SourceForge and reaching 20k+ active users on the Chrome
-        Web Store (as of Sep 2025). I'm also the creator of React Wheel Picker —
-        iOS-like wheel picker for React with smooth inertia scrolling and
-        infinite loop support. It has earned 4k+ weekly downloads on npm and was
-        selected for ▲Vercel OSS Program summer 2025 cohort. Let's connect and
-        collaborate!
+      <div className="font-maven text-lg leading-6 text-black dark:text-white">
+        Hi, I&apos;m Ayush, a developer who works a bit like an undercover
+        operator. Most people just see me writing code, but behind the scenes,
+        I&apos;m someone who quietly solves problems, builds systems, and keeps
+        things running without drawing too much attention. I&apos;ve worked
+        across the stack and I treat every project like a mission: understand
+        the objective, plan the approach, and execute with focus. I contribute
+        to open source projects and maintain my own side projects. I enjoy
+        diving into new technologies and figuring out how to use them
+        effectively. And I am interested in knowing the system architecture and
+        design principles that make software robust and scalable. Outside of
+        code, I have organized events, led a technical club, and taken on
+        projects that push me to learn something new. And I have also got
+        acknowledged by{" "}
+        <span className="underline">
+          Chief Minister of Haryana
+        </span>{" "}
+        for a technical project I have worked on. I&apos;m looking for
+        opportunities where I can contribute my skills and grow as a developer.
       </div>
     </div>
   );

@@ -1,5 +1,19 @@
 // components/WakaSummary.tsx
-export default function WakaSummary({ stats }: { stats: any }) {
+interface Editor {
+  name: string;
+}
+
+interface OperatingSystem {
+  name: string;
+}
+
+interface WakaStats {
+  editors?: Editor[];
+  operating_systems?: OperatingSystem[];
+  human_readable_daily_average?: string;
+}
+
+export default function WakaSummary({ stats }: { stats: WakaStats }) {
   const editor = stats.editors?.[0]?.name || "Unknown";
   const os = stats.operating_systems?.[0]?.name || "Unknown";
   const avg = stats.human_readable_daily_average;
