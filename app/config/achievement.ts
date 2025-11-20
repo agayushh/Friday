@@ -5,27 +5,27 @@ export const achieve_list: achieveType[] = [
   {
     icon: PiMedalLight,
     title:
-      "Got acknowledged by Shri Nayab Singh (Cheif Minister, Haryana) for a project",
+      "Received recognition from Shri Nayab Singh Saini (Chief Minister, Haryana) for innovative project work",
     time: "Jan 2025",
   },
   {
     icon: PiMedalLight,
-    title: "Got selected for a national level bootcamp in amity jaipur",
+    title: "Selected for national-level technical bootcamp at Jaipur",
     time: "Sept 2024",
   },
   {
     icon: PiMedalLight,
-    title: "co founded a technical club named deviators",
+    title: "Co-founded Deviators, a technical club focused on innovation and development",
     time: "Feb 2024 - April 2025",
   },
   {
     icon: PiMedalLight,
-    title: "Organized a 2 days hackathon which was a complete hit",
+    title: "Successfully organized a 2-day hackathon with significant participation and engagement",
     time: "April 2025",
   },
   {
     icon: PiMedalLight,
-    title: "Won AIML track prize at HACK KRMU",
+    title: "Won AI/ML track prize at HACK KRMU hackathon",
     time: "March 2024",
   },
 ];
