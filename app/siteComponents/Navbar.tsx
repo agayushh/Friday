@@ -150,7 +150,7 @@ const Navbar = () => {
               </a>
               <button
                 onClick={toggleDarkMode}
-                className="px-2 rounded-lg transition-all duration-300"
+                className="rounded-lg transition-all duration-300"
                 aria-label="Toggle dark mode"
               >
                 {darkMode ? <LuSunMedium size={18} /> : <FiMoon size={18} />}
