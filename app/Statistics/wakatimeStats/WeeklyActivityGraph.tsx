@@ -1,12 +1,33 @@
 // components/charts/WeeklyActivityChart.tsx
 "use client";
 import ReactECharts from "echarts-for-react";
+import { useEffect, useState } from "react";
 
 export default function WeeklyActivityChart({
   dailyData,
 }: {
   dailyData: number[];
 }) {
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  useEffect(() => {
+    // Check initial theme
+    const checkTheme = () => {
+      const isDark = document.documentElement.classList.contains("dark");
+      setIsDarkMode(isDark);
+    };
+
+    checkTheme();
+
+    // Listen for theme changes
+    const observer = new MutationObserver(checkTheme);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
   // Convert decimal hours to hours and minutes format
   const formatTime = (hours: number) => {
     const totalMinutes = Math.round(hours * 60);
@@ -41,9 +62,14 @@ export default function WeeklyActivityChart({
   // Assuming dailyData is already ordered for the last 7 days
   const last7DaysData = dailyData.slice(-7);
 
+  // Dynamic colors based on theme - more contrast for better visibility
+  const textColor = isDarkMode ? "#ddd" : "#000";
+  const axisLineColor = isDarkMode ? "#555" : "#999";
+  const splitLineColor = isDarkMode ? "#333" : "#d0d0d0";
+
   const option = {
     backgroundColor: "transparent",
-    textStyle: { color: "#ddd" },
+    textStyle: { color: textColor },
     grid: {
       left: "5%",
       right: "5%",
@@ -61,14 +87,16 @@ export default function WeeklyActivityChart({
     xAxis: {
       type: "category",
       data: last7Days,
-      axisLine: { lineStyle: { color: "#555" } },
+      axisLine: { lineStyle: { color: axisLineColor } },
+      axisLabel: { color: textColor },
     },
     yAxis: {
       type: "value",
       name: "Time",
-      axisLine: { lineStyle: { color: "#555" } },
-      splitLine: { lineStyle: { color: "#333" } },
+      axisLine: { lineStyle: { color: axisLineColor } },
+      splitLine: { lineStyle: { color: splitLineColor } },
       axisLabel: {
+        color: textColor,
         formatter: (value: number) => {
           const totalMinutes = Math.round(value * 60);
           const hrs = Math.floor(totalMinutes / 60);
