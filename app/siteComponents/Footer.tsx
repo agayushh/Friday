@@ -10,7 +10,7 @@ const Footer = () => {
           &{" "}
           <a
             className="underline"
-            href="https://chandai.com/"
+            href="https://chanhdai.com/"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -86,7 +86,8 @@ const Navbar = () => {
     if (element) {
       const navbarHeight = 58; // Height of the fixed navbar
       const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - navbarHeight;
 
       window.scrollTo({
         top: offsetPosition,
@@ -119,17 +120,23 @@ const Navbar = () => {
             <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
               <div className="font-jura flex space-x-4 lg:space-x-6 items-center">
                 <span className="cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-                  Portfolio
+                  <a
+                    href="https://drive.google.com/file/d/1Nkci76iAqjbDZ4Hxm4-V-0H60GCvJct6/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Resume
+                  </a>
                 </span>
-                <span 
+                <span
                   className="cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
-                  onClick={() => scrollToSection('projects')}
+                  onClick={() => scrollToSection("projects")}
                 >
                   Projects
                 </span>
-                <span 
+                <span
                   className="cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
-                  onClick={() => scrollToSection('experience')}
+                  onClick={() => scrollToSection("experience")}
                 >
                   Experience
                 </span>
@@ -189,17 +196,24 @@ const Navbar = () => {
             className="cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
-            Portfolio
+            <a
+              href="
+            https://drive.google.com/file/d/1Nkci76iAqjbDZ4Hxm4-V-0H60GCvJct6/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Resume
+            </a>
           </span>
           <span
             className="cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
-            onClick={() => scrollToSection('projects')}
+            onClick={() => scrollToSection("projects")}
           >
             Projects
           </span>
           <span
             className="cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
-            onClick={() => scrollToSection('experience')}
+            onClick={() => scrollToSection("experience")}
           >
             Experience
           </span>
