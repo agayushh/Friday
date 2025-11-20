@@ -11,6 +11,7 @@ import Stack from "./siteComponents/Stack";
 import Experience from "./siteComponents/Experience";
 import { Project } from "./siteComponents/Projects";
 import Achievements  from "./siteComponents/Achievements";
+import Footer from "./siteComponents/Footer";
 
 // Generate metadata for SEO
 export const metadata = {
@@ -43,6 +44,8 @@ const Page = () => {
         <Project />
         <BorderSpacing />
         <Achievements />
+        <BorderSpacing />
+        <Footer />
       </div>
     </div>
   );
