@@ -6,6 +6,8 @@ import { SiExpress } from "react-icons/si";
 import { FaAws } from "react-icons/fa6";
 import { SiPrisma } from "react-icons/si";
 import { SiSocketdotio } from "react-icons/si";
+import { SiHono } from "react-icons/si";
+import { RiVercelFill } from "react-icons/ri";
 
 export const TECH_STACK: TechStack[] = [
   // Languages
@@ -68,6 +70,12 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Framework"],
   },
   {
+    icon: SiHono,
+    title: "Hono JS",
+    href: "https://hono.dev/",
+    categories: ["Framework"],
+  },
+  {
     icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png",
     title: "Tailwind CSS",
     href: "https://tailwindcss.com/",
@@ -123,12 +131,6 @@ export const TECH_STACK: TechStack[] = [
     href: "https://redux.js.org/",
     categories: ["State Management"],
   },
-  {
-    icon: "https://icon.icepanel.io/Technology/svg/FastAPI.svg",
-    title: "MobX-State-Tree",
-    href: "https://mobx-state-tree.js.org/",
-    categories: ["State Management"],
-  },
 
   // Databases & ORMs
   {
@@ -150,12 +152,6 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Database"],
   },
   {
-    icon: "https://icon.icepanel.io/Technology/svg/Redis.svg",
-    title: "Redis",
-    href: "https://redis.io/",
-    categories: ["Database"],
-  },
-  {
     icon: SiPrisma,
     title: "Prisma",
     href: "https://www.prisma.io/",
@@ -174,6 +170,12 @@ export const TECH_STACK: TechStack[] = [
     title: "Docker",
     href: "https://www.docker.com/",
     categories: ["Containerization"],
+  },
+  {
+    icon: RiVercelFill,
+    title: "Vercel",
+    href: "https://vercel.com/",
+    categories: ["Database"],
   },
   {
     icon: "https://icon.icepanel.io/Technology/svg/NPM.svg",
@@ -240,16 +242,16 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Platform", "OS"],
   },
 ];
- //digital ocean 
-  // trpc
-  //webrtc 
-  //neovim
-  //grafana
-  //k8s
-  //apache
-  //vercel
-  //kafka
-  // prometheus
-  //hono
-  //nest 
-  //go
+//digital ocean
+// trpc
+//webrtc
+//neovim
+//grafana
+//k8s
+//apache
+//vercel
+//kafka
+// prometheus
+//hono
+//nest
+//go
