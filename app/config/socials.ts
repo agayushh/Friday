@@ -20,9 +20,9 @@ export const SOCIAL_LINKS: SocialLinks[] = [
     href: "https://x.com/pydottsx",
   },
   {
-    icon: "https://assets.chanhdai.com/images/link-icons/dailydotdev.webp?t=1759581475",
-    title: "daily.dev",
-    description: "@ayushGoyal",
-    href: "https://app.daily.dev/ncdai",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Hashnode_icon.svg/449px-Hashnode_icon.svg.png?20220709210921",
+    title: "HashNode",
+    description: "@ayushgoyal28",
+    href: "https://hashnode.com/@ayushgoyal28",
   },
 ];
