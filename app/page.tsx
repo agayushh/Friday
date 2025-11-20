@@ -13,15 +13,11 @@ import { Project } from "./siteComponents/Projects";
 import Achievements  from "./siteComponents/Achievements";
 import Footer from "./siteComponents/Footer";
 
-// Generate metadata for SEO
-export const metadata = {
-  title: "Ayush Goyal - Software Engineer Portfolio",
-  description: "Software Engineer passionate about creating high-performance, user-centric software solutions",
-};
+// Remove duplicate metadata - it's already in layout.tsx
 
 const Page = () => {
   return (
-    <div className="flex justify-center size-full">
+    <main className="flex justify-center size-full">
       <div className="border-x h-fit w-11/12 sm:w-9/12 md:w-9/12 lg:w-7/12 xl:w-6/12 2xl:w-5/12">
         <Navbar />
         <Header />
@@ -33,7 +29,7 @@ const Page = () => {
         <BorderSpacing />
         <About />
         <BorderSpacing />
-        <Suspense fallback={<div className="p-4 text-center">Loading statistics...</div>}>
+        <Suspense fallback={<div className="p-4 text-center" role="status" aria-live="polite">Loading statistics...</div>}>
           <Stats />
         </Suspense>
         <BorderSpacing />
@@ -47,7 +43,7 @@ const Page = () => {
         <BorderSpacing />
         <Footer />
       </div>
-    </div>
+    </main>
   );
 };
 

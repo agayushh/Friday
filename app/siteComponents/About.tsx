@@ -2,12 +2,12 @@ import React from "react";
 
 const About = () => {
   return (
-    <div id="about" className="mt-8 m-2">
-      <p className="text-2xl font-jura tracking-wide text-gray-600 dark:text-gray-400">
+    <section id="about" className="mt-8 m-2" aria-labelledby="about-heading">
+      <h2 id="about-heading" className="text-2xl font-jura tracking-wide text-gray-600 dark:text-gray-400">
         {" "}
         ABOUT
-      </p>
-      <div className="border-b absolute left-0 w-screen"></div>
+      </h2>
+      <div className="border-b absolute left-0 w-screen" aria-hidden="true"></div>
       <br />
       <div className="font-maven text-lg leading-6 text-black dark:text-white">
         Hi, I&apos;m Ayush, a developer who works a bit like an undercover
@@ -29,7 +29,7 @@ const About = () => {
         for a technical project I have worked on. I&apos;m looking for
         opportunities where I can contribute my skills and grow as a developer.
       </div>
-    </div>
+    </section>
   );
 };
 

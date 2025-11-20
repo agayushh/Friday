@@ -1,32 +1,45 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Jura, Maven_Pro } from "next/font/google";
 import "./globals.css";
+import StructuredData from "./components/StructuredData";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
+  preload: false,
 });
 
 const maven = Maven_Pro({
   variable: "--font-maven",
   subsets: ["latin"],
   weight: ["400", "700"],
+  display: "swap",
+  preload: false,
 });
 
 const jura = Jura({
   variable: "--font-jura",
   subsets: ["latin"],
+  display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {
-  title: "Ayush Goyal - Software Engineer Portfolio",
+  metadataBase: new URL('https://ayushgoyal.dev'),
+  title: {
+    default: "Ayush Goyal - Software Engineer Portfolio",
+    template: "%s | Ayush Goyal"
+  },
   description:
-    "Software Engineer passionate about creating high-performance, user-centric software solutions with intuitive and engaging designs.",
+    "Software Engineer passionate about creating high-performance, user-centric software solutions with intuitive and engaging designs. Specializing in Full Stack Development, DevOps, and Cloud Computing.",
   keywords: [
     "Ayush Goyal",
     "Software Engineer",
@@ -53,19 +66,57 @@ export const metadata: Metadata = {
     "API Development",
     "Responsive Design",
   ],
-  authors: [{ name: "Ayush Goyal" }],
+  authors: [{ name: "Ayush Goyal", url: "https://ayushgoyal.dev" }],
+  creator: "Ayush Goyal",
+  publisher: "Ayush Goyal",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
     title: "Ayush Goyal - Software Engineer Portfolio",
     description:
       "Software Engineer passionate about creating high-performance, user-centric software solutions with intuitive and engaging designs.",
     type: "website",
+    locale: "en_US",
+    url: "https://ayushgoyal.dev",
+    siteName: "Ayush Goyal Portfolio",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Ayush Goyal - Software Engineer Portfolio",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Ayush Goyal - Software Engineer Portfolio",
     description:
       "Software Engineer with a passion for creating high-performance, user-centric software solutions.",
+    creator: "@agayushh",
+    images: ["/og-image.png"],
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code', // Add your Google Search Console verification code
+  },
+  alternates: {
+    canonical: 'https://ayushgoyal.dev',
+  },
+  category: 'technology',
 };
 
 export default function RootLayout({
@@ -76,6 +127,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <StructuredData />
         {/* Prevent flash of light mode - runs before React hydration */}
         <script
           dangerouslySetInnerHTML={{

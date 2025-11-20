@@ -132,3 +132,28 @@
     scrollbar-width: none;
   }
 }
+
+/* Performance optimizations */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Content visibility for offscreen content */
+@layer utilities {
+  .content-visibility-auto {
+    content-visibility: auto;
+  }
+}
