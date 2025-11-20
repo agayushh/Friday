@@ -24,7 +24,7 @@ const Achievements = () => {
                   {achieve.title}
                 </p>
               </div>
-              <p className="font-maven text-xs sm:text-sm ml-9 sm:ml-0 sm:mr-4 text-gray-500 dark:text-gray-400 flex-shrink-0">
+              <p className="font-maven text-xs sm:text-sm ml-9 sm:ml-0 sm:mr-4 text-gray-500 dark:text-gray-400 flex-shrink-0 mb-4">
                 {achieve.time}
               </p>
             </div>
