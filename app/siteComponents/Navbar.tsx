@@ -81,6 +81,21 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const navbarHeight = 58; // Height of the fixed navbar
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+    setIsMenuOpen(false); // Close mobile menu after clicking
+  };
+
   return (
     <div
       ref={navbarRef}
@@ -106,11 +121,17 @@ const Navbar = () => {
                 <span className="cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
                   Portfolio
                 </span>
-                <span className="cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                <span 
+                  className="cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                  onClick={() => scrollToSection('projects')}
+                >
                   Projects
                 </span>
-                <span className="cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-                  Blogs
+                <span 
+                  className="cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                  onClick={() => scrollToSection('experience')}
+                >
+                  Experience
                 </span>
               </div>
               <a
@@ -172,15 +193,15 @@ const Navbar = () => {
           </span>
           <span
             className="cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
-            onClick={() => setIsMenuOpen(false)}
+            onClick={() => scrollToSection('projects')}
           >
             Projects
           </span>
           <span
             className="cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
-            onClick={() => setIsMenuOpen(false)}
+            onClick={() => scrollToSection('experience')}
           >
-            Blogs
+            Experience
           </span>
         </div>
       </div>
