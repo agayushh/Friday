@@ -26,14 +26,9 @@ export const PERSONAL_INFO: PersonalInfoType[] = [
   },
   {
     icon: RiPhoneFill,
-    title: "Contact",
-    information: "+91 9560147344",
-  },
-  {
-    icon: CiGlobe,
-    title: "Portfolio",
-    information: "agayush.me",
-    href: "https://agayush.me",
+    title: "Schedule a Meet",
+    information: "Calendly",
+    href: "https://calendly.com/agayush088/30min",
   },
   {
     icon: IoMdMale,
