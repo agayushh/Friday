@@ -1,7 +1,6 @@
 import { PersonalInfoType } from "@/types/personal-info";
 import { IoCodeSlash } from "react-icons/io5";
 import { LuLightbulb } from "react-icons/lu";
-import { CiGlobe } from "react-icons/ci";
 import { IoMdMale } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { RiPhoneFill } from "react-icons/ri";

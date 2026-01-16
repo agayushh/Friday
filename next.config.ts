@@ -7,6 +7,11 @@ const nextConfig: NextConfig = {
   // Enable React compiler for better performance
   reactStrictMode: true,
   
+  // Turbopack configuration
+  turbopack: {
+    root: '/home/ayush/Desktop/friday',
+  },
+  
   // Optimize images
   images: {
     formats: ['image/avif', 'image/webp'],

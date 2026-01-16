@@ -15,6 +15,9 @@ import Footer from "./siteComponents/Footer";
 
 // Remove duplicate metadata - it's already in layout.tsx
 
+// Force dynamic rendering to prevent build-time API calls
+export const dynamic = 'force-dynamic';
+
 const Page = () => {
   return (
     <main className="flex justify-center size-full">
