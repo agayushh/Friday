@@ -8,6 +8,7 @@ import { SiPrisma } from "react-icons/si";
 import { SiSocketdotio } from "react-icons/si";
 import { SiHono } from "react-icons/si";
 import { RiVercelFill } from "react-icons/ri";
+import { FaGitAlt } from "react-icons/fa";
 
 export const TECH_STACK: TechStack[] = [
   // Languages
@@ -160,7 +161,7 @@ export const TECH_STACK: TechStack[] = [
 
   // Tools
   {
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/768px-Git_icon.svg.png",
+    icon: FaGitAlt,
     title: "Git",
     href: "https://git-scm.com/",
     categories: ["Version Control"],

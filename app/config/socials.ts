@@ -20,9 +20,9 @@ export const SOCIAL_LINKS: SocialLinks[] = [
     href: "https://x.com/pydottsx",
   },
   {
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Hashnode_icon.svg/449px-Hashnode_icon.svg.png?20220709210921",
-    title: "HashNode",
-    description: "@ayushgoyal28",
-    href: "https://hashnode.com/@ayushgoyal28",
+    icon: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/bluesky-icon.png",
+    title: "BlueSky",
+    description: "@pydottsx.bsky.social",
+    href: "https://bsky.app/profile/pydottsx.bsky.social",
   },
 ];
