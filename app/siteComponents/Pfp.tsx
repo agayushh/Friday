@@ -1,9 +1,28 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import ProfilePic from "@/public/avatar-light.png";
 import ProfilePicDark from "@/public/avatar-dark.png";
+import { cn } from "@/lib/utils";
 
 const Pfp = () => {
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    setIsDark(document.documentElement.classList.contains("dark"));
+
+    const observer = new MutationObserver(() => {
+      setIsDark(document.documentElement.classList.contains("dark"));
+    });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="flex h-fit items-center px-4 sm:px-0">
       <div className="border-t w-screen absolute left-0 h-36 sm:h-44 md:h-48 lg:h-52 xl:h-56 2xl:h-56"></div>
@@ -11,7 +30,10 @@ const Pfp = () => {
         <Image
           src={ProfilePic}
           alt="Ayush Goyal - Software Engineer"
-          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-100 dark:opacity-0"
+          className={cn(
+            "absolute inset-0 w-full h-full object-cover transition-opacity duration-500",
+            !isDark ? "opacity-100" : "opacity-0"
+          )}
           priority
           placeholder="blur"
           quality={90}
@@ -19,7 +41,10 @@ const Pfp = () => {
         <Image
           src={ProfilePicDark}
           alt="Ayush Goyal - Software Engineer"
-          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 dark:opacity-100"
+          className={cn(
+            "absolute inset-0 w-full h-full object-cover transition-opacity duration-500",
+            isDark ? "opacity-100" : "opacity-0"
+          )}
           priority
           placeholder="blur"
           quality={90}
