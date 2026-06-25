@@ -2,12 +2,11 @@ import { achieve_list } from "../config/achievement";
 
 const Achievements = () => {
   return (
-    <div>
+    <section aria-labelledby="achievements-heading">
       <div>
-        <p className="text-2xl font-jura tracking-wide text-gray-600 dark:text-gray-400 pl-2">
-          {" "}
+        <h2 id="achievements-heading" className="text-2xl font-jura tracking-wide text-gray-600 dark:text-gray-400 pl-2">
           ACHIEVEMENTS
-        </p>
+        </h2>
 
         <div>
           {achieve_list.map((achieve, index) => (
@@ -31,7 +30,7 @@ const Achievements = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

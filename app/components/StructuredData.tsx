@@ -8,7 +8,7 @@ export default function StructuredData() {
     "url": "https://ayushgoyal.dev",
     "sameAs": [
       "https://github.com/agayushh",
-      "https://linkedin.com/in/ayushgoyal",
+      "https://linkedin.com/in/ayushh-goyal",
       "https://twitter.com/agayushh"
     ],
     "knowsAbout": [
@@ -24,10 +24,6 @@ export default function StructuredData() {
       "Kubernetes",
       "AWS"
     ],
-    "alumniOf": {
-      "@type": "EducationalOrganization",
-      "name": "Your University Name"
-    },
     "image": "https://ayushgoyal.dev/avatar-light.png"
   };
 
