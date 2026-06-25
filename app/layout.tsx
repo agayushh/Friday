@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
   display: "swap",
-  preload: false,
+  preload: true,
 });
 
 const maven = Maven_Pro({
@@ -22,14 +22,14 @@ const maven = Maven_Pro({
   subsets: ["latin"],
   weight: ["400", "700"],
   display: "swap",
-  preload: false,
+  preload: true,
 });
 
 const jura = Jura({
   variable: "--font-jura",
   subsets: ["latin"],
   display: "swap",
-  preload: false,
+  preload: true,
 });
 
 export const metadata: Metadata = {

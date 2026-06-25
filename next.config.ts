@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
   
   // Turbopack configuration
   turbopack: {
-    root: '/home/ayush/Desktop/friday',
+    root: '/home/ayush/Desktop/Friday',
   },
   
   // Optimize images
