@@ -5,4 +5,5 @@ export interface TechStack {
   title: string;
   href: string;
   categories: string[];
+  color?: string;
 }

@@ -13,25 +13,25 @@ import { FaGitAlt } from "react-icons/fa";
 export const TECH_STACK: TechStack[] = [
   // Languages
   {
-    icon: "https://cdn.iconscout.com/icon/free/png-256/free-typescript-icon-svg-download-png-2945272.png",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
     title: "TypeScript",
     href: "https://www.typescriptlang.org/",
     categories: ["Language"],
   },
   {
-    icon: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
     title: "JavaScript",
     href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     categories: ["Language"],
   },
   {
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
     title: "Python",
     href: "https://www.python.org/",
     categories: ["Language"],
   },
   {
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
     title: "C++",
     href: "https://devdocs.io/cpp/",
     categories: ["Language"],
@@ -53,7 +53,7 @@ export const TECH_STACK: TechStack[] = [
 
   // Frameworks & Libraries
   {
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
     title: "React",
     href: "https://react.dev/",
     categories: ["Library", "UI Library"],
@@ -77,7 +77,7 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Framework"],
   },
   {
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
     title: "Tailwind CSS",
     href: "https://tailwindcss.com/",
     categories: ["Framework"],
@@ -107,7 +107,7 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Library"],
   },
   {
-    icon: "https://reactrouter.com/_brand/React%20Router%20Brand%20Assets/React%20Router%20Logo/Light.png",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactrouter/reactrouter-original.svg",
     title: "React Router",
     href: "https://reactrouter.com/",
     categories: ["Library", "Navigation"],

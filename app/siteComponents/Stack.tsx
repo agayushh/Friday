@@ -13,7 +13,7 @@ export default function Stack() {
         {TECH_STACK.map((stk) => {
           return (
             <SimpleTooltip key={stk.title} content={stk.title}>
-              <div className="h-10 w-10 mx-1">
+              <div className="h-10 w-10 mx-1 transition-transform duration-300 hover:scale-115">
                 <a 
                   href={stk.href}
                   target="_blank"
@@ -29,7 +29,7 @@ export default function Stack() {
                       loading="lazy"
                     />
                   ) : (
-                    <stk.icon className="h-10 w-10" aria-hidden="true" />
+                    <stk.icon className={`h-10 w-10 ${stk.color || ""}`} aria-hidden="true" />
                   )}
                 </a>
               </div>
