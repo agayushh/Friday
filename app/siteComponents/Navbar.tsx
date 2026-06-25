@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
+import { flushSync } from "react-dom";
 import { FiMoon } from "react-icons/fi";
 import { LuSunMedium } from "react-icons/lu";
 import { FaGithub } from "react-icons/fa";
@@ -66,15 +67,61 @@ const Navbar = () => {
     };
   }, []);
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    if (!darkMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
+  const toggleDarkMode = (event?: React.MouseEvent<HTMLButtonElement>) => {
+    const isAppearanceTransition =
+      typeof document !== "undefined" &&
+      // @ts-ignore
+      document.startViewTransition &&
+      !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const performToggle = (nextMode: boolean) => {
+      if (nextMode) {
+        document.documentElement.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+      }
+    };
+
+    if (!isAppearanceTransition) {
+      const nextMode = !darkMode;
+      setDarkMode(nextMode);
+      performToggle(nextMode);
+      return;
     }
+
+    const x = event ? event.clientX : window.innerWidth / 2;
+    const y = event ? event.clientY : window.innerHeight / 2;
+    const endRadius = Math.hypot(
+      Math.max(x, window.innerWidth - x),
+      Math.max(y, window.innerHeight - y)
+    );
+
+    // @ts-ignore
+    const transition = document.startViewTransition(() => {
+      flushSync(() => {
+        const nextMode = !darkMode;
+        setDarkMode(nextMode);
+        performToggle(nextMode);
+      });
+    });
+
+    transition.ready.then(() => {
+      document.documentElement.animate(
+        {
+          clipPath: [
+            `circle(0px at ${x}px ${y}px)`,
+            `circle(${endRadius}px at ${x}px ${y}px)`,
+          ],
+        },
+        {
+          duration: 400,
+          easing: "ease-in-out",
+          pseudoElement: "::view-transition-new(root)",
+        }
+      );
+    });
   };
 
   const toggleMenu = () => {
