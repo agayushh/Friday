@@ -11,7 +11,7 @@ const Pfp = () => {
         <Image
           src={ProfilePic}
           alt="Ayush Goyal - Software Engineer"
-          className="w-full h-full object-cover dark:hidden"
+          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-100 dark:opacity-0"
           priority
           placeholder="blur"
           quality={90}
@@ -19,7 +19,7 @@ const Pfp = () => {
         <Image
           src={ProfilePicDark}
           alt="Ayush Goyal - Software Engineer"
-          className="w-full h-full object-cover hidden dark:block"
+          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 dark:opacity-100"
           priority
           placeholder="blur"
           quality={90}
