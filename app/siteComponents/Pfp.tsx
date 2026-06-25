@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import ProfilePic from "@/public/Pasted image.png";
+import ProfilePicDark from "@/public/Pasted image dark.png";
 
 const Pfp = () => {
   return (
@@ -10,7 +11,15 @@ const Pfp = () => {
         <Image
           src={ProfilePic}
           alt="Ayush Goyal - Software Engineer"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover dark:hidden"
+          priority
+          placeholder="blur"
+          quality={90}
+        />
+        <Image
+          src={ProfilePicDark}
+          alt="Ayush Goyal - Software Engineer"
+          className="w-full h-full object-cover hidden dark:block"
           priority
           placeholder="blur"
           quality={90}
