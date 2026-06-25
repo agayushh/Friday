@@ -168,7 +168,7 @@ const Navbar = () => {
               <div className="font-jura flex space-x-4 lg:space-x-6 items-center">
                 <span className="cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
                   <a
-                    href="https://drive.google.com/file/d/1Nkci76iAqjbDZ4Hxm4-V-0H60GCvJct6/view?usp=sharing"
+                    href="https://drive.google.com/file/d/118Fjl7KgCKGMMohqkmRFh_UUGBit5X8Q/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -244,8 +244,7 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             <a
-              href="
-            https://drive.google.com/file/d/1Nkci76iAqjbDZ4Hxm4-V-0H60GCvJct6/view?usp=sharing"
+              href="https://drive.google.com/file/d/118Fjl7KgCKGMMohqkmRFh_UUGBit5X8Q/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
