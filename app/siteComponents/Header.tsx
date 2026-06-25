@@ -1,7 +1,7 @@
 const Header = () => {
   const dotPattern = {
     backgroundImage:
-      "radial-gradient(rgba(0,0,0,0.1) 0.8px, transparent 0.8px)",
+      "radial-gradient(rgba(0,0,0,0.05) 0.8px, transparent 0.8px)",
     backgroundSize: "16px 16px",
   };
 
