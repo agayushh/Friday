@@ -30,7 +30,7 @@ const Footer = () => {
           </span>
         </p>
       </div>
-      <div className="absolute w-screen left-0 border-t"></div>
+      <div className="absolute w-screen left-1/2 -translate-x-1/2 border-t"></div>
     </div>
   );
 };

@@ -5,11 +5,11 @@ import { SOCIAL_LINKS } from "../config/socials";
 
 const Socials = () => {
   return (
-    <div className="mt-10 border overflow-hidden grid grid-cols-1 sm:grid-cols-2">
+    <div className="mt-10 border-y overflow-hidden grid grid-cols-1 sm:grid-cols-2">
       {SOCIAL_LINKS.map((social, index) => (
         <div
           key={index}
-          className="flex items-center justify-between group p-4 hover:bg-gray-100 dark:hover:bg-[#111] transition-colors border-b last:border-b-0 sm:border-r sm:even:border-r-0 sm:[&:nth-last-child(-n+2)]:border-b-0"
+          className="flex items-center justify-between group p-4 hover:bg-gray-50 dark:hover:bg-[#111] transition-colors border-b last:border-b-0 sm:border-r sm:even:border-r-0 sm:[&:nth-last-child(-n+2)]:border-b-0"
         >
           <div className="flex items-center space-x-4">
             <a href={social.href} target="_blank" rel="noopener noreferrer">

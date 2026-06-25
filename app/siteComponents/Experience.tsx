@@ -7,7 +7,7 @@ export default function Experience() {
       <h2 id="experience-heading" className="text-2xl pt-2 font-jura text-gray-600 dark:text-gray-400 tracking-wide">
         EXPERIENCE
       </h2>
-      <div className="left-0 border-t w-screen absolute"></div>
+      <div className="left-1/2 -translate-x-1/2 border-t w-screen absolute"></div>
       <ExperienceClient experiences={EXP_LIST} />
     </section>
   );
