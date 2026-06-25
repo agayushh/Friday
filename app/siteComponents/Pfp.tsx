@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import ProfilePic from "@/public/Pasted image.png";
-import ProfilePicDark from "@/public/Pasted image dark.png";
+import ProfilePic from "@/public/avatar-light.png";
+import ProfilePicDark from "@/public/avatar-dark.png";
 
 const Pfp = () => {
   return (

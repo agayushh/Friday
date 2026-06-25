@@ -28,7 +28,7 @@ export default function StructuredData() {
       "@type": "EducationalOrganization",
       "name": "Your University Name"
     },
-    "image": "https://ayushgoyal.dev/Pasted image.png"
+    "image": "https://ayushgoyal.dev/avatar-light.png"
   };
 
   return (
