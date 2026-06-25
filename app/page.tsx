@@ -15,8 +15,8 @@ import Footer from "./siteComponents/Footer";
 
 // Remove duplicate metadata - it's already in layout.tsx
 
-// Force dynamic rendering to prevent build-time API calls
-export const dynamic = 'force-dynamic';
+// Enable ISR (Incremental Static Regeneration) to cache the page on edge/server and load instantly
+export const revalidate = 3600; // Revalidate every hour
 
 const Page = () => {
   return (
