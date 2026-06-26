@@ -80,6 +80,9 @@
   --sidebar-accent-foreground: oklch(0 0 0); /* Changed to pure black */
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --scrollbar-track: #f4f4f5;
+  --scrollbar-thumb: #d4d4d8;
+  --scrollbar-thumb-hover: #a1a1aa;
 }
 
 .dark {
@@ -114,6 +117,9 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  --scrollbar-track: #09090b;
+  --scrollbar-thumb: #27272a;
+  --scrollbar-thumb-hover: #3f3f46;
 }
 
 @layer base {
@@ -126,14 +132,27 @@
 }
 
 @layer utilities {
-  .scrollbar-hide::-webkit-scrollbar,
-  html::-webkit-scrollbar,
-  body::-webkit-scrollbar {
-    display: none !important;
+  html, body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
   }
-  .scrollbar-hide, html, body {
-    -ms-overflow-style: none !important;
-    scrollbar-width: none !important;
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
   }
 }
 
