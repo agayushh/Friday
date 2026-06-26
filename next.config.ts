@@ -15,6 +15,7 @@ const nextConfig: NextConfig = {
   // Optimize images
   images: {
     formats: ['image/avif', 'image/webp'],
+    qualities: [75, 85, 90],
     remotePatterns: [
       {
         protocol: 'https',
@@ -75,12 +76,6 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/_next/static/:path*',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-        ],
-      },
-      {
-        source: '/./public/image.png',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],

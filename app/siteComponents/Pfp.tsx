@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import ProfilePic from "@/public/avatar-light.png";
-import ProfilePicDark from "@/public/avatar-dark.png";
+import ProfilePic from "@/public/avatar-light.webp";
+import ProfilePicDark from "@/public/avatar-dark.webp";
 
 const Pfp = () => {
   return (
@@ -13,6 +13,7 @@ const Pfp = () => {
           alt="Ayush Goyal - Software Engineer"
           className="absolute inset-0 w-full h-full object-cover dark:hidden"
           priority
+          fetchPriority="high"
           placeholder="blur"
           quality={90}
         />
@@ -21,6 +22,7 @@ const Pfp = () => {
           alt="Ayush Goyal - Software Engineer"
           className="absolute inset-0 w-full h-full object-cover hidden dark:block"
           priority
+          fetchPriority="high"
           placeholder="blur"
           quality={90}
         />
