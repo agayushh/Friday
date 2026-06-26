@@ -1,105 +1,60 @@
 "use client";
 
-import {
-  motion,
-  useMotionValue,
-  useSpring,
-} from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { motion, useMotionValue, useSpring } from "framer-motion";
+import { useEffect } from "react";
 import { cn } from "@/lib/utils";
 
 interface ScrollProgressProps {
   className?: string;
-  containerRef?: React.RefObject<HTMLElement | null>;
-  inline?: boolean;
 }
 
-export function ScrollProgress({
-  className,
-  containerRef,
-  inline,
-}: ScrollProgressProps) {
+export function ScrollProgress({ className }: ScrollProgressProps) {
   const rawProgress = useMotionValue(0);
   const smoothProgress = useSpring(rawProgress, {
     damping: 40,
     stiffness: 300,
   });
-  const [ready, setReady] = useState(false);
-  const initialised = useRef(false);
 
   useEffect(() => {
-    const scrollEl: HTMLElement | Window =
-      containerRef?.current ?? window;
-
-    const getProgress = () => {
-      if (containerRef?.current) {
-        const el = containerRef.current;
-        const docHeight = el.scrollHeight - el.clientHeight;
-        return docHeight > 0 ? el.scrollTop / docHeight : 0;
-      }
+    const handleScroll = () => {
+      const scrollTop =
+        window.scrollY ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop ||
+        0;
       const docHeight =
-        document.documentElement.scrollHeight -
+        (document.documentElement.scrollHeight || document.body.scrollHeight) -
         window.innerHeight;
-      return docHeight > 0 ? window.scrollY / docHeight : 0;
+      const p = docHeight > 0 ? scrollTop / docHeight : 0;
+      rawProgress.set(p);
     };
 
-    const handleScroll = () =>
-      rawProgress.set(getProgress());
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    document.addEventListener("scroll", handleScroll, { passive: true });
 
-    scrollEl.addEventListener("scroll", handleScroll, {
-      passive: true,
-    });
+    handleScroll();
 
-    if (!initialised.current) {
-      initialised.current = true;
-      const p = getProgress();
-      rawProgress.jump(p);
-      smoothProgress.jump(p);
-      requestAnimationFrame(() => setReady(true));
-    }
-
-    return () =>
-      scrollEl.removeEventListener("scroll", handleScroll);
-  }, [containerRef, rawProgress, smoothProgress]);
-
-  const bar = (
-    <motion.div
-      className="h-full w-full bg-primary"
-      style={{
-        scaleX: smoothProgress,
-        transformOrigin: "left",
-      }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: ready ? 1 : 0 }}
-      transition={{ duration: 0.15, ease: "linear" }}
-      aria-hidden="true"
-    />
-  );
-
-  if (inline) {
-    return (
-      <div
-        className={cn(
-          "sticky top-0 z-10 h-1 w-full overflow-hidden rounded-t-lg bg-muted/50",
-          className,
-        )}
-      >
-        {bar}
-      </div>
-    );
-  }
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, [rawProgress]);
 
   return (
-    <div className={cn("fixed top-0 left-0 z-[9999] h-1.5 w-full bg-gray-200 dark:bg-[#27272a]", className)}>
+    <div
+      className={cn(
+        "absolute top-0 left-0 w-full h-1.5 bg-gray-200 dark:bg-zinc-800",
+        className
+      )}
+      style={{ zIndex: 99999 }}
+    >
       <motion.div
         className="h-full w-full bg-black dark:bg-white"
         style={{
           scaleX: smoothProgress,
           transformOrigin: "left",
+          opacity: 1,
         }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: ready ? 1 : 0 }}
-        transition={{ duration: 0.15, ease: "linear" }}
         aria-hidden="true"
       />
     </div>

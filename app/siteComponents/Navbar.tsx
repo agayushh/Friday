@@ -5,6 +5,7 @@ import { FiMoon } from "react-icons/fi";
 import { LuSunMedium } from "react-icons/lu";
 import { FaGithub } from "react-icons/fa";
 import { HiMenu, HiX } from "react-icons/hi";
+import { ScrollProgress } from "@/components/scroll-progress";
 
 const Navbar = () => {
   // Initialize with a function to read localStorage on first render
@@ -147,8 +148,9 @@ const Navbar = () => {
   return (
     <div
       ref={navbarRef}
-      className="fixed left-0 w-screen bg-white dark:bg-[#09090b] z-30 transition-colors duration-300"
+      className="fixed top-0 left-0 w-screen bg-white dark:bg-[#09090b] z-50 transition-colors duration-300"
     >
+      <ScrollProgress />
       <div className="w-full border-y mt-1.5 py-3 h-12">
         <div className="flex justify-center items-center w-full h-full">
           <div className="flex justify-between items-center w-11/12 sm:w-10/12 md:w-9/12 lg:w-8/12 xl:w-7/12 2xl:w-6/12 px-4 text-gray-900 dark:text-white transition-all duration-300 ease-in-out">

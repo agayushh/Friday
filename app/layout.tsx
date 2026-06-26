@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Jura, Maven_Pro } from "next/font/google";
 import "./globals.css";
 import StructuredData from "./components/StructuredData";
-import { ScrollProgress } from "@/components/scroll-progress";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -152,7 +151,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable}
        ${jura.variable} ${maven.variable} antialiased min-h-screen w-screen overflow-x-hidden scrollbar-hide`}
       >
-        <ScrollProgress />
         {children}
       </body>
     </html>
