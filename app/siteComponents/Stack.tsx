@@ -8,8 +8,7 @@ export default function Stack() {
       <h2 id="stack-heading" className="text-2xl pl-3 tracking-wide font-jura text-gray-600 dark:text-gray-400">
         STACK
       </h2>
-      <div className="border-t absolute w-screen left-1/2 -translate-x-1/2" aria-hidden="true"></div>
-      <div className=" mt-5 mb-4 grid grid-cols-6 sm:grid-cols-7 md:grid-cols-9 lg:grid-cols-10 xl:grid-cols-12 gap-4 m-1">
+      <div className="mt-5 mb-4 grid grid-cols-6 sm:grid-cols-7 md:grid-cols-9 lg:grid-cols-10 xl:grid-cols-12 gap-4 px-4 justify-items-center">
         {TECH_STACK.map((stk) => {
           return (
             <SimpleTooltip key={stk.title} content={stk.title}>
@@ -38,7 +37,6 @@ export default function Stack() {
           );
         })}
       </div>
-      <div className="border-t absolute w-screen left-1/2 -translate-x-1/2" aria-hidden="true"></div>
     </section>
   );
 }

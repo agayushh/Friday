@@ -7,7 +7,6 @@ const About = () => {
         {" "}
         ABOUT
       </h2>
-      <div className="border-b absolute left-1/2 -translate-x-1/2 w-screen" aria-hidden="true"></div>
       <br />
       <div className="font-maven text-lg leading-6 text-black dark:text-white">
         Hi, I&apos;m Ayush, a developer who works a bit like an undercover

@@ -21,7 +21,7 @@ export const revalidate = 3600; // Revalidate every hour
 const Page = () => {
   return (
     <main className="flex justify-center size-full">
-      <div className="relative border-x h-fit w-11/12 sm:w-9/12 md:w-9/12 lg:w-7/12 xl:w-6/12 2xl:w-5/12">
+      <div className="relative h-fit w-11/12 sm:w-10/12 md:w-9/12 lg:w-8/12 xl:w-7/12 2xl:w-6/12 transition-all duration-300 ease-in-out">
         <Navbar />
         <Header />
         <Pfp />

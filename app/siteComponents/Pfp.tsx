@@ -6,8 +6,7 @@ import ProfilePicDark from "@/public/avatar-dark.webp";
 const Pfp = () => {
   return (
     <div className="flex h-fit items-center px-4 sm:px-0">
-      <div className="border-t w-screen absolute left-1/2 -translate-x-1/2 h-36 sm:h-44 md:h-48 lg:h-52 xl:h-56 2xl:h-56"></div>
-      <div className="relative rounded-full overflow-hidden aspect-square h-36 w-36 sm:h-44 sm:w-44 md:h-48 md:w-48 lg:h-52 lg:w-52 xl:h-56 xl:w-56 2xl:h-56 2xl:w-56 border border-border z-10 shrink-0">
+      <div className="relative rounded-full overflow-hidden aspect-square h-36 w-36 sm:h-44 sm:w-44 md:h-48 md:w-48 lg:h-52 lg:w-52 xl:h-56 xl:w-56 2xl:h-56 2xl:w-56 border border-border z-10 shrink-0 transition-all duration-300 ease-in-out">
         <Image
           src={ProfilePic}
           alt="Ayush Goyal - Software Engineer"

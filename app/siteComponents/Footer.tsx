@@ -26,7 +26,6 @@ const Footer = () => {
           <p>© 2026 Ayush. All rights reserved.</p>
         </div>
       </div>
-      <div className="absolute w-screen left-1/2 -translate-x-1/2 border-t"></div>
     </div>
   );
 };

@@ -12,7 +12,7 @@ const Achievements = () => {
           {achieve_list.map((achieve, index) => (
             <div
               key={index}
-              className="border-b flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-4 py-3 sm:py-2"
+              className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-4 py-3 sm:py-2"
             >
               <div className="flex items-center gap-2 sm:gap-4">
                 <span className="flex-shrink-0">

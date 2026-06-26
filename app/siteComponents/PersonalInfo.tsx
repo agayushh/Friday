@@ -8,7 +8,7 @@ const PersonalInfo = () => {
         Detailed dossier of the Intelligence Personnel
       </div>
       <div className="mt-4 px-5">
-        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {PERSONAL_INFO.map((info) => (
             <li key={info.title} className="flex items-center space-x-3">
               <div className="border p-[1px] rounded-lg flex-shrink-0">
@@ -23,13 +23,13 @@ const PersonalInfo = () => {
                       ? info.href
                       : `mailto:${info.information}`
                   }
-                  className="hover:underline break-all text-black dark:text-white"
+                  className="hover:underline break-words text-black dark:text-white"
                   target="_blank"
                 >
                   {info.information}
                 </a>
               ) : (
-                <p className="break-all text-black dark:text-white">{info.information}</p>
+                <p className="break-words text-black dark:text-white">{info.information}</p>
               )}
             </li>
           ))}
