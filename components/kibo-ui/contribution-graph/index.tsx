@@ -306,7 +306,7 @@ export const ContributionGraph = ({
       }}
     >
       <div
-        className={cn("flex w-max max-w-full flex-col gap-2", className)}
+        className={cn("flex w-full max-w-full flex-col gap-2", className)}
         style={{ fontSize, ...style }}
         {...props}
       />
@@ -384,16 +384,14 @@ export const ContributionGraphCalendar = ({
   return (
     <div
       className={cn(
-        "max-w-full overflow-x-scroll scrollbar-hide overflow-y-hidden",
+        "w-full",
         className
       )}
       {...props}
     >
       <svg
-        className="block overflow-auto"
-        height={height}
+        className="block w-full h-auto"
         viewBox={`0 0 ${width} ${height}`}
-        width={width}
       >
         <title>{title}</title>
         {!hideMonthLabels && (
@@ -435,7 +433,7 @@ export const ContributionGraphFooter = ({
 }: ContributionGraphFooterProps) => (
   <div
     className={cn(
-      "flex flex-wrap gap-1 whitespace-nowrap sm:gap-x-4",
+      "flex flex-wrap gap-1 whitespace-nowrap sm:gap-x-4 w-full",
       className
     )}
     {...props}

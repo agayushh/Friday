@@ -15,7 +15,7 @@ const Stats = () => {
     <div className="mt-10 m-2">
       <h2 className="text-2xl tracking-wide font-jura text-gray-600 dark:text-gray-400 font-medium">REPORT</h2>
       <br />
-      <div className="scrollbar-hide overflow-x-auto space-y-4">
+      <div className="w-full space-y-4">
         <Suspense fallback={<GitHubStatsLoading />}>
           <GitHubGraphWithSuspense/>
         </Suspense>
