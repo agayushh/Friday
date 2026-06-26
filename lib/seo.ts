@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-export const NEXT_PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL || "https://pulkitxm.com";
+export const NEXT_PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL || "https://ayushg.live";
 export const OG_IMAGE_WIDTH = 1200;
 export const OG_IMAGE_HEIGHT = 630;
 
@@ -17,11 +17,9 @@ export interface BlogPost {
 }
 
 const PERSON_SAME_AS = [
-  "https://github.com/Pulkitxm",
-  "https://www.linkedin.com/in/pulkitxm",
-  "https://x.com/_pulkitxm",
-  "https://blogs.pulkitxm.com",
-  "https://www.npmjs.com/~pulkitxm",
+  "https://github.com/agayushh",
+  "https://linkedin.com/in/ayushh-goyal",
+  "https://twitter.com/agayushh",
 ];
 
 const PERSON_KNOWS_ABOUT = [
@@ -96,7 +94,8 @@ const PERSON_KNOWS_ABOUT = [
 ];
 
 const BASE_KEYWORDS = [
-  "Pulkit",
+  "Ayush Goyal",
+  "Ayush",
   "software engineer",
   "senior software engineer",
   "full-stack developer",
@@ -173,13 +172,13 @@ const COMPONENT_KEYWORDS = [
 
 export const SITE = {
   logo: `${NEXT_PUBLIC_API_URL}/icon.png`,
-  name: "Pulkit",
+  name: "Ayush Goyal",
   personId: `${NEXT_PUBLIC_API_URL}/#person`,
-  personImage: `${NEXT_PUBLIC_API_URL}/me.png`,
+  personImage: `${NEXT_PUBLIC_API_URL}/avatar-light.webp`,
   sameAs: PERSON_SAME_AS,
-  titleDefault: "Pulkit | Software Engineer & AI Agent Builder",
-  titleTemplate: "%s | Pulkit",
-  twitter: "@_pulkitxm",
+  titleDefault: "Ayush Goyal | Software Engineer Portfolio",
+  titleTemplate: "%s | Ayush Goyal",
+  twitter: "@agayushh",
   url: NEXT_PUBLIC_API_URL,
   websiteId: `${NEXT_PUBLIC_API_URL}/#website`,
 } as const;
@@ -309,43 +308,16 @@ function personNode(): JsonLdNode {
   return {
     "@id": SITE.personId,
     "@type": "Person",
-    alumniOf: {
-      "@type": "EducationalOrganization",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "India",
-        addressLocality: "Gurugram",
-        addressRegion: "Haryana",
-      },
-      name: "Dronacharya College of Engineering",
-    },
-    award: [
-      "ICPC Amritapuri 2023 Regionalist",
-      "Gurugram University Ideathon Winner - First Place",
-    ],
     description:
-      "Software Engineer specializing in TypeScript, React, Next.js, Node.js, Python, and cloud infrastructure (AWS/GCP/Azure). Deep hands-on expertise architecting production-grade AI agents, LLM orchestration, and modern web applications. Proven track record at MagicAPI, CrowdVolt (YC W24), and DatawaveLabs.",
+      "Software Engineer passionate about creating high-performance, user-centric software solutions with intuitive and engaging designs. Specializing in Full Stack Development, DevOps, and Cloud Computing.",
     gender: "Male",
-    hasCredential: [
-      {
-        "@type": "EducationalOccupationalCredential",
-        credentialCategory: "Bachelor of Technology",
-        recognizedBy: {
-          "@type": "EducationalOrganization",
-          name: "Dronacharya College of Engineering",
-        },
-      },
-    ],
     hasOccupation: {
       "@type": "Occupation",
-      educationRequirements: "Bachelor's Degree in Computer Science or related field",
-      experienceRequirements: "Demonstrated experience in full-stack web development, cloud architecture, and AI engineering",
       name: "Software Engineer",
-      occupationalCategory: "15-1252.00 - Software Developers",
-      skills: "TypeScript, React, Next.js, Node.js, Python, AWS, System Design, AI Agents",
+      skills: "Full Stack Development, DevOps, Cloud Computing, Next.js, React, TypeScript, Docker, Kubernetes, AWS",
     },
     image: SITE.personImage,
-    jobTitle: "Software Engineer & AI Agent Builder",
+    jobTitle: "Software Engineer",
     knowsAbout: PERSON_KNOWS_ABOUT,
     knowsLanguage: [
       {
@@ -353,44 +325,25 @@ function personNode(): JsonLdNode {
         alternateName: "en",
         name: "English",
       },
-      {
-        "@type": "Language",
-        alternateName: "hi",
-        name: "Hindi",
-      },
     ],
-    memberOf: {
-      "@type": "Organization",
-      name: "Deviators Coding Club",
-      roleName: "Chairperson",
-    },
-    name: "Pulkit",
-    nationality: {
-      "@type": "Country",
-      name: "India",
-    },
+    name: "Ayush Goyal",
     sameAs: SITE.sameAs,
     seeks: [
       {
         "@type": "Demand",
-        description: "Seeking challenging software engineering, senior frontend, backend, or AI engineer roles at innovative tech companies.",
+        description: "Seeking challenging software engineering, full-stack, DevOps, or cloud engineering roles at innovative tech companies.",
         itemOffered: {
           "@type": "Service",
-          description: "Full-stack web development, scalable cloud architecture, system design, and AI agent integration.",
-          name: "Software Engineering & AI Development Services",
+          description: "Full-stack web development, scalable cloud architecture, DevOps, and high-performance software engineering.",
+          name: "Software Engineering, DevOps & Cloud Development Services",
         },
       },
     ],
     url: SITE.url,
     workLocation: {
       "@type": "Place",
-      description: "Remote / Worldwide / India",
+      description: "Remote / Worldwide",
       name: "Remote",
-    },
-    worksFor: {
-      "@type": "Organization",
-      name: "MagicAPI",
-      url: "https://www.magicapi.com",
     },
   };
 }
@@ -399,12 +352,12 @@ function websiteNode(): JsonLdNode {
   return {
     "@id": SITE.websiteId,
     "@type": "WebSite",
-    alternateName: ["pulkitxm", "Pulkit Portfolio", "Pulkit Software Engineer"],
+    alternateName: ["Ayush Goyal", "Ayush Goyal Portfolio", "Ayush Goyal Software Engineer"],
     description:
-      "Official portfolio and technical blog of Pulkit, a Software Engineer specializing in TypeScript, Next.js, Node.js, cloud systems, and AI agent workflows. Explore cutting-edge projects, UI components, and expert articles on system design and LLMs.",
+      "Software Engineer passionate about creating high-performance, user-centric software solutions with intuitive and engaging designs. Specializing in Full Stack Development, DevOps, and Cloud Computing.",
     inLanguage: "en-US",
     keywords: BASE_KEYWORDS.join(", "),
-    name: "Pulkit - Software Engineer & AI Agent Builder",
+    name: "Ayush Goyal - Software Engineer Portfolio",
     potentialAction: {
       "@type": "SearchAction",
       "query-input": "required name=search_term_string",
@@ -498,7 +451,7 @@ function componentNode(input: SeoInput): JsonLdNode {
     "@type": "SoftwareSourceCode",
     applicationCategory: "UI Component",
     author: authorRef,
-    codeRepository: "https://github.com/Pulkitxm/pulkitxm.com",
+    codeRepository: "https://github.com/agayushh/Friday",
     description: component.description,
     image: input.image,
     inLanguage: "en-US",
@@ -723,12 +676,12 @@ function buildMetadata(input: SeoInput): Metadata {
   const keywords = [...BASE_KEYWORDS, ...(config.extraKeywords ?? []), ...(input.keywords ?? [])];
 
   const imageAlt = input.component
-    ? `${input.title} - React component for shadcn/ui and Next.js`
-    : `${input.title} - Pulkit's Software Engineering Portfolio`;
+    ? `${input.title} - React component for Ayush Goyal Portfolio`
+    : `${input.title} - Ayush Goyal's Software Engineering Portfolio`;
 
   const openGraph: Metadata["openGraph"] = isArticle
     ? {
-        authors: ["Pulkit"],
+        authors: ["Ayush Goyal"],
         description: input.description,
         images: [
           {
@@ -743,7 +696,7 @@ function buildMetadata(input: SeoInput): Metadata {
         locale: "en_US",
         modifiedTime: input.blog?.frontmatter.date,
         publishedTime: input.blog?.frontmatter.date,
-        siteName: "Pulkit - Software Engineer & AI Agent Builder",
+        siteName: "Ayush Goyal - Software Engineer Portfolio",
         tags: input.blog?.frontmatter.tags,
         title: input.title,
         type: "article",
@@ -752,7 +705,7 @@ function buildMetadata(input: SeoInput): Metadata {
     : input.type === "home"
     ? {
         description: input.description,
-        firstName: "Pulkit",
+        firstName: "Ayush",
         gender: "male",
         images: [
           {
@@ -765,11 +718,11 @@ function buildMetadata(input: SeoInput): Metadata {
           },
         ],
         locale: "en_US",
-        siteName: "Pulkit - Software Engineer & AI Agent Builder",
+        siteName: "Ayush Goyal - Software Engineer Portfolio",
         title: input.title,
         type: "profile",
         url,
-        username: "pulkitxm",
+        username: "agayushh",
       }
     : {
         description: input.description,
@@ -784,7 +737,7 @@ function buildMetadata(input: SeoInput): Metadata {
           },
         ],
         locale: "en_US",
-        siteName: "Pulkit - Software Engineer & AI Agent Builder",
+        siteName: "Ayush Goyal - Software Engineer Portfolio",
         title: input.title,
         type: "website",
         url,
@@ -821,10 +774,10 @@ function buildMetadata(input: SeoInput): Metadata {
 
   const metadata: Metadata = {
     alternates: { canonical: url },
-    authors: [{ name: "Pulkit", url: SITE.url }],
+    authors: [{ name: "Ayush Goyal", url: SITE.url }],
     category: input.blog?.frontmatter.tags[0] || config.category,
-    classification: "Software Engineering, AI Engineering, Full-Stack Web Development",
-    creator: "Pulkit",
+    classification: "Software Engineering, DevOps, Cloud Computing, Full-Stack Web Development",
+    creator: "Ayush Goyal",
     description: input.description,
     keywords,
     metadataBase: new URL(NEXT_PUBLIC_API_URL),
@@ -834,11 +787,11 @@ function buildMetadata(input: SeoInput): Metadata {
       "dmca-site-verification": "OEQ0aUVFTHhXY1ludHB6VEovd29WZz090",
       "format-detection": "telephone=no",
       "og:logo": SITE.logo,
-      "profile:username": "pulkitxm",
-      "twitter:domain": "pulkitxm.com",
+      "profile:username": "agayushh",
+      "twitter:domain": "ayushg.live",
       "twitter:url": url,
     },
-    publisher: "Pulkit",
+    publisher: "Ayush Goyal",
     robots: {
       follow: true,
       googleBot: {

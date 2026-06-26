@@ -5,7 +5,7 @@ export default function StructuredData() {
     "name": "Ayush Goyal",
     "jobTitle": "Software Engineer",
     "description": "Software Engineer passionate about creating high-performance, user-centric software solutions with intuitive and engaging designs. Specializing in Full Stack Development, DevOps, and Cloud Computing.",
-    "url": "https://ayushgoyal.dev",
+    "url": "https://ayushg.live",
     "sameAs": [
       "https://github.com/agayushh",
       "https://linkedin.com/in/ayushh-goyal",
@@ -29,7 +29,7 @@ export default function StructuredData() {
     ],
     "image": {
       "@type": "ImageObject",
-      "url": "https://ayushgoyal.dev/avatar-light.webp",
+      "url": "https://ayushg.live/avatar-light.webp",
       "width": 800,
       "height": 800
     },

@@ -13,6 +13,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       }
     ],
-    sitemap: 'https://ayushgoyal.dev/sitemap.xml',
+    sitemap: 'https://ayushg.live/sitemap.xml',
   }
 }

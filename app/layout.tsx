@@ -33,7 +33,7 @@ const jura = Jura({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ayushgoyal.dev'),
+  metadataBase: new URL('https://ayushg.live'),
   title: {
     default: "Ayush Goyal - Software Engineer Portfolio",
     template: "%s | Ayush Goyal"
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     "API Development",
     "Responsive Design",
   ],
-  authors: [{ name: "Ayush Goyal", url: "https://ayushgoyal.dev" }],
+  authors: [{ name: "Ayush Goyal", url: "https://ayushg.live" }],
   creator: "Ayush Goyal",
   publisher: "Ayush Goyal",
   formatDetection: {
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
       "Software Engineer passionate about creating high-performance, user-centric software solutions with intuitive and engaging designs.",
     type: "website",
     locale: "en_US",
-    url: "https://ayushgoyal.dev",
+    url: "https://ayushg.live",
     siteName: "Ayush Goyal Portfolio",
     images: [
       {
@@ -114,7 +114,7 @@ export const metadata: Metadata = {
     google: 'your-google-verification-code', // Add your Google Search Console verification code
   },
   alternates: {
-    canonical: 'https://ayushgoyal.dev',
+    canonical: 'https://ayushg.live',
   },
   category: 'technology',
 };
