@@ -4,7 +4,7 @@ export default function StructuredData() {
     "@type": "Person",
     "name": "Ayush Goyal",
     "jobTitle": "Software Engineer",
-    "description": "Software Engineer passionate about creating high-performance, user-centric software solutions with intuitive and engaging designs.",
+    "description": "Software Engineer passionate about creating high-performance, user-centric software solutions with intuitive and engaging designs. Specializing in Full Stack Development, DevOps, and Cloud Computing.",
     "url": "https://ayushgoyal.dev",
     "sameAs": [
       "https://github.com/agayushh",
@@ -22,9 +22,22 @@ export default function StructuredData() {
       "Node.js",
       "Docker",
       "Kubernetes",
-      "AWS"
+      "AWS",
+      "Software Architecture",
+      "API Development",
+      "UI/UX"
     ],
-    "image": "https://ayushgoyal.dev/avatar-light.png"
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://ayushgoyal.dev/avatar-light.webp",
+      "width": 800,
+      "height": 800
+    },
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Software Engineer",
+      "skills": "Full Stack Development, DevOps, Cloud Computing"
+    }
   };
 
   return (
