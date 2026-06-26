@@ -1,8 +1,20 @@
 import type { Metadata } from "next";
-import { NEXT_PUBLIC_API_URL } from "@/lib/constants";
-import type { BlogPost } from "@/lib/mdx";
-import { OG_IMAGE_HEIGHT, OG_IMAGE_WIDTH } from "@/lib/og/dimensions";
-import { toIST } from "@/lib/temporal";
+
+export const NEXT_PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL || "https://pulkitxm.com";
+export const OG_IMAGE_WIDTH = 1200;
+export const OG_IMAGE_HEIGHT = 630;
+
+export interface BlogPost {
+  content: string;
+  frontmatter: {
+    date: string;
+    description: string;
+    readTime?: number | string;
+    series?: string;
+    tags: string[];
+    title: string;
+  };
+}
 
 const PERSON_SAME_AS = [
   "https://github.com/Pulkitxm",
@@ -290,7 +302,7 @@ function urlFor(path: string): string {
 
 function normalizeDate(date: string): string {
   const withTime = date.includes("T") ? date : `${date}T00:00:00+00:00`;
-  return toIST(withTime).toISOString();
+  return new Date(withTime).toISOString();
 }
 
 function personNode(): JsonLdNode {
