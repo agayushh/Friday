@@ -44,7 +44,7 @@ const Header = () => {
         <div
           role="img"
           aria-label="Initials Logo: AG"
-          className="text-9xl font-jura font-extralight text-black dark:text-white relative z-10 cursor-pointer select-none flex items-center justify-center transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.02] active:scale-[0.98] hover:tracking-[0.2em] hover:opacity-90 tracking-normal"
+          className="text-9xl font-jura font-extralight text-black dark:text-white relative z-10 cursor-pointer select-none flex items-center justify-center transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] hover:opacity-90 tracking-normal"
         >
           <span className="anim-reveal-a inline-block">A</span>
           <span className="anim-reveal-g inline-block">G</span>
