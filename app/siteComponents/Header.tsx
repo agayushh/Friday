@@ -14,32 +14,25 @@ const Header = () => {
   return (
     <div className="">
       <style dangerouslySetInnerHTML={{ __html: `
-        @keyframes customSlideUp {
+        @keyframes elegantReveal {
           from {
-            transform: translateY(30px);
+            transform: translateY(20px);
             opacity: 0;
+            filter: blur(4px);
           }
           to {
             transform: translateY(0);
             opacity: 1;
+            filter: blur(0);
           }
         }
-        .anim-slide-up-a {
-          animation: customSlideUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        .anim-reveal-a {
+          animation: elegantReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
           opacity: 0;
         }
-        .anim-slide-up-g {
-          animation: customSlideUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.18s forwards;
+        .anim-reveal-g {
+          animation: elegantReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
           opacity: 0;
-        }
-        .glow-hover {
-          transition: text-shadow 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .glow-hover:hover {
-          text-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
-        }
-        .dark .glow-hover:hover {
-          text-shadow: 0 0 25px rgba(255, 255, 255, 0.35), 0 0 50px rgba(255, 255, 255, 0.15);
         }
       `}} />
       <div className="min-h-58 w-full flex justify-center items-center mt-[58px] bg-white dark:bg-[#09090b] transition-colors relative overflow-hidden">
@@ -51,10 +44,10 @@ const Header = () => {
         <div
           role="img"
           aria-label="Initials Logo: AG"
-          className="text-9xl font-jura font-extralight text-black dark:text-white relative z-10 cursor-pointer select-none flex items-center justify-center transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.03] active:scale-[0.97] hover:tracking-[0.15em] tracking-normal glow-hover"
+          className="text-9xl font-jura font-extralight text-black dark:text-white relative z-10 cursor-pointer select-none flex items-center justify-center transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.02] active:scale-[0.98] hover:tracking-[0.2em] hover:opacity-90 tracking-normal"
         >
-          <span className="anim-slide-up-a inline-block">A</span>
-          <span className="anim-slide-up-g inline-block">G</span>
+          <span className="anim-reveal-a inline-block">A</span>
+          <span className="anim-reveal-g inline-block">G</span>
         </div>
       </div>
     </div>
