@@ -15,7 +15,7 @@ export const EXP_LIST = [
     ],
   },
   {
-    Index: 1,
+    Index: 2,
     Position: "Student",
     Company: "Edunet x Microsoft",
     StartDate: "Feb 2025",

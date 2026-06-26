@@ -27,6 +27,7 @@ export default function Stack() {
                       width={40}
                       height={40}
                       loading="lazy"
+                      style={{ width: "auto", height: "auto" }}
                     />
                   ) : (
                     <stk.icon className={`h-10 w-10 ${stk.color || ""}`} aria-hidden="true" />
