@@ -149,7 +149,7 @@ const Navbar = () => {
       ref={navbarRef}
       className="fixed left-0 w-screen bg-white dark:bg-[#09090b] z-30 transition-colors duration-300"
     >
-      <div className="w-full mt-1.5 py-3 h-12">
+      <div className="w-full border-y mt-1.5 py-3 h-12">
         <div className="flex justify-center items-center w-full h-full">
           <div className="flex justify-between items-center w-11/12 sm:w-10/12 md:w-9/12 lg:w-8/12 xl:w-7/12 2xl:w-6/12 px-4 text-gray-900 dark:text-white transition-all duration-300 ease-in-out">
             {/* Logo on the left */}
@@ -234,7 +234,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-12 left-0 w-full bg-white dark:bg-[#09090b] shadow-lg overflow-hidden transition-all duration-300 ease-in-out ${
+        className={`md:hidden absolute top-12 left-0 w-full bg-white dark:bg-[#09090b] border-b shadow-lg overflow-hidden transition-all duration-300 ease-in-out ${
           isMenuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
         }`}
       >

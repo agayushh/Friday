@@ -33,7 +33,7 @@ export default function ExperienceClient({ experiences }: { experiences: Experie
       {experiences.map((exp, index) => {
         const isExpanded = expandedItems.has(index);
         return (
-          <div key={exp.Index} className="pb-2 mt-1 left-0">
+          <div key={exp.Index} className="border-b pb-2 mt-1 left-0">
             <div className="flex justify-between">
               <div>
                 <div className="text-lg font-maven text-black dark:text-white">{exp.Company}</div>

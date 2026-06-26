@@ -14,6 +14,7 @@ const Stats = () => {
   return (
     <div className="mt-10 m-2">
       <h2 className="text-2xl tracking-wide font-jura text-gray-600 dark:text-gray-400 font-medium">REPORT</h2>
+      <div className="border-b absolute left-1/2 -translate-x-1/2 w-screen"></div>
       <br />
       <div className="w-full space-y-4">
         <Suspense fallback={<GitHubStatsLoading />}>
