@@ -90,19 +90,18 @@ export function ScrollProgress({
   }
 
   return (
-    <motion.div
-      className={cn(
-        "fixed top-0 left-0 z-50 h-1.5 w-full bg-primary",
-        className,
-      )}
-      style={{
-        scaleX: smoothProgress,
-        transformOrigin: "left",
-      }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: ready ? 1 : 0 }}
-      transition={{ duration: 0.15, ease: "linear" }}
-      aria-hidden="true"
-    />
+    <div className={cn("fixed top-0 left-0 z-[9999] h-1.5 w-full bg-gray-200 dark:bg-[#27272a]", className)}>
+      <motion.div
+        className="h-full w-full bg-black dark:bg-white"
+        style={{
+          scaleX: smoothProgress,
+          transformOrigin: "left",
+        }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: ready ? 1 : 0 }}
+        transition={{ duration: 0.15, ease: "linear" }}
+        aria-hidden="true"
+      />
+    </div>
   );
 }

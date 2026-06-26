@@ -126,7 +126,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="scrollbar-hide">
       <head>
         <StructuredData />
         {/* Prevent flash of light mode - runs before React hydration */}
@@ -150,7 +150,7 @@ export default function RootLayout({
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable}
-       ${jura.variable} ${maven.variable} antialiased h-screen w-screen overflow-x-hidden scrollbar-hide`}
+       ${jura.variable} ${maven.variable} antialiased min-h-screen w-screen overflow-x-hidden scrollbar-hide`}
       >
         <ScrollProgress />
         {children}
